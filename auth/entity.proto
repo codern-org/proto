@@ -1,0 +1,16 @@
+syntax = "proto3";
+package codern.auth;
+
+enum AuthProvider {
+  SELF = 0;
+  GOOGLE = 1;
+}
+
+message User {
+  string id = 1;
+  string email = 2;
+  string displayName = 3;
+  string profilePath = 4;
+  AuthProvider provider = 5;
+  int64 createdAt = 6;
+}

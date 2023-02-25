@@ -1,0 +1,37 @@
+syntax = "proto3";
+package codern.auth;
+
+import "auth/entity.proto";
+
+message AuthenticateRequest {
+  string header = 1;
+}
+
+message AuthenticateResponse {
+  User user = 1;
+}
+
+message SignInRequest {
+  string email = 1;
+  string password = 2;
+  string ipAddress = 3;
+  string userAgent = 4;
+}
+
+message SignInResponse {
+  string sessionId = 1;
+}
+
+message SignInWithGoogleRequest {
+  string code = 1;
+  string ipAddress = 2;
+  string userAgent = 3;
+}
+
+message SignInWithGoogleResponse {
+  string sessionId = 1;
+}
+
+message SignOutRequest {
+  string header = 1;
+}
