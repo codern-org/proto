@@ -1,5 +1,6 @@
 syntax = "proto3";
 package codern.auth;
+option go_package = "github.com/codern-org/protos/auth";
 
 import "auth/entity.proto";
 
