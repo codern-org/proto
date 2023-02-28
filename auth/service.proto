@@ -1,13 +1,12 @@
 syntax = "proto3";
 package codern.auth;
-option go_package = "github.com/codern-org/protos/auth";
+option go_package = "pkg/pb";
 
-import "common/common.proto";
 import "auth/message.proto";
 
 service AuthService {
   rpc Authenticate(AuthenticateRequest) returns (AuthenticateResponse);
   rpc SignIn(SignInRequest) returns (SignInResponse);
   rpc SignInWithGoogle(SignInWithGoogleRequest) returns (SignInWithGoogleResponse);
-  rpc SignOut(SignOutRequest) returns (codern.common.Empty);
+  rpc SignOut(SignOutRequest) returns (SignOutResponse);
 }
