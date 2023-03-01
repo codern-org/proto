@@ -7,6 +7,8 @@ import "auth/message.proto";
 service AuthService {
   rpc Authenticate(AuthenticateRequest) returns (AuthenticateResponse);
   rpc SignIn(SignInRequest) returns (SignInResponse);
-  rpc SignInWithGoogle(SignInWithGoogleRequest) returns (SignInWithGoogleResponse);
   rpc SignOut(SignOutRequest) returns (SignOutResponse);
+
+  rpc GetGoogleOAuthUrl(GoogleOAuthUrlRequest) returns (GoogleOAuthUrlResponse);
+  rpc SignInWithGoogle(SignInWithGoogleRequest) returns (SignInWithGoogleResponse);
 }

@@ -23,6 +23,12 @@ message SignInResponse {
   string sessionId = 1;
 }
 
+message SignOutRequest {
+  string header = 1;
+}
+
+message SignOutResponse {}
+
 message SignInWithGoogleRequest {
   string code = 1;
   string ipAddress = 2;
@@ -33,10 +39,8 @@ message SignInWithGoogleResponse {
   string sessionId = 1;
 }
 
-message SignOutRequest {
-  string header = 1;
-}
+message GoogleOAuthUrlRequest {}
 
-message SignOutResponse {
-
+message GoogleOAuthUrlResponse {
+  string url = 1;
 }
